@@ -78,5 +78,46 @@ def reverseWords(input):
     inputWords=inputWords[-1::-1]
 
     # 重新组合字符串
-    output = ''.join(inputWords)
+    output = ' '.join(inputWords)
+    return output
+if __name__ == "__main__":
+    input = 'I like runoob'
+    rw = reverseWords(input)
+    print(rw)
 
+# Tuple(元组)
+tuple = ("abcd", "786", 2.23, "runoob", 70.2)
+tinytuple = (123, "runoob")
+print(tuple)
+print(tuple[0])
+print(tuple[1:3])
+print(tuple[2:])
+print(tinytuple * 2)
+print(tuple + tinytuple)
+#print(tuple[0] = 11)# 修改元组元素的操作是非法的
+#虽然tuple的元素不可改变，但它可以包含可变对象，比如list对象
+#构造0个或1个元素的元组比较特殊，需要额外的语法规则
+tup1 = ()
+tup2 = (20, )
+# string，list，tuple均属于sequence序列
+
+#Set （集合）
+#使用{}或set()创建集合，创建空集合需要使用set()
+student = {'Tom','Jim','Mary','Tom','Jack','Rose'}
+print(student)#自动去掉重复元素
+
+#成员测试
+if 'Rose' in student :
+    print('Rose in set')
+else:
+    print('Rose not in set')
+
+# set 可以进行集合运算
+a = set('aabcsabsaaa')
+b = set('alasadad')
+
+print(a)
+print(a-b) #a和b的差集
+print(a | b) #a和b的并集
+print(a & b) #a和b的交集
+print(a ^ b)
